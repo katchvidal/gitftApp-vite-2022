@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { GiftGrid } from './components/GiftGrid'
-import { InputCategory } from './components/InputCategory'
+import { GiftGrid, InputCategory } from './components'
 
 export const GiftExpertApp = () => {
     const [categories, setCategories] = useState([])
