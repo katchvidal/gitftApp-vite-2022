@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { GiftGrid } from './components/GiftGrid'
+import { InputCategory } from './components/InputCategory'
 
 export const GiftExpertApp = () => {
+    const [categories, setCategories] = useState([])
+    const onAddCategory = ( inputValue ) => {
+        if ( categories.includes( inputValue ) ) return;
+        setCategories([inputValue,...categories ])
+    }
   return (
     <>
-    <div> GiftExpertApp Main </div>
+    <h2> Aplicacion Gifts React + Vite </h2>
+    <InputCategory onAddCategory={ onAddCategory } />
+        {
+            categories.map(( cat ) => (
+                <GiftGrid key={ cat } category={ cat } />
+            ))
+        }
     </>
   )
 }
