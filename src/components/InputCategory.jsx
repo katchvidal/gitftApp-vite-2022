@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types';
 
 export const InputCategory = ({ onAddCategory }) => {
     const [inputValue, setInputValue] = useState('')
@@ -16,7 +17,7 @@ export const InputCategory = ({ onAddCategory }) => {
 
     return (
         <>
-            <form onSubmit={ handleSubmit }>
+            <form onSubmit={ handleSubmit } aria-label="form">
                 <input
                     type='text'
                     value={inputValue}
@@ -28,3 +29,7 @@ export const InputCategory = ({ onAddCategory }) => {
         </>
     )
 }
+
+InputCategory.propTypes = {
+    onAddCategory: PropTypes.func.isRequired,
+  };

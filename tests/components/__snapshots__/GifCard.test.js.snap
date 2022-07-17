@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en Gif Card Debe hacer Match vs SnapShot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <p>
+       
+      Pug
+       
+    </p>
+    <img
+      alt="Pug"
+      src="https://google.com/pug.jpg"
+    />
+  </div>
+</div>
+`;
