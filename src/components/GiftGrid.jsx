@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useFetchGifs } from '../hooks/custom/useFetchGifs'
 import { GifCard } from './GifCard'
+import PropTypes from 'prop-types';
 
 export const GiftGrid = ({ category }) => {
 
@@ -11,8 +12,7 @@ export const GiftGrid = ({ category }) => {
         <>
             {(isLoading) ?
                 <div className="flex bg-red-lighter max-w-sm mb-4">
-
-
+                    Cargando...
                     <svg role="status" className="inline h-8 w-8 animate-spin mr-2 text-gray-200 dark:text-gray-600 fill-blue-600"
                         viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -42,3 +42,7 @@ export const GiftGrid = ({ category }) => {
         </>
     )
 }
+
+GiftGrid.propTypes = {
+    category: PropTypes.string.isRequired,
+};
